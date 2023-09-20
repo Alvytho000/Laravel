@@ -55,3 +55,21 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo(0, 0);
   };
 });
+
+const dropdown = document.querySelector(".account-dropdown .dropdown");
+const dropContent = document.querySelector(".account-dropdown .dropdown-content");
+const accountDrop = document.querySelector(".account-dropdown");
+
+let isActive = false; // Tambahkan variabel isActive untuk melacak status aktif
+
+dropdown.onclick = () => {
+  if (isActive) {
+    dropContent.classList.remove("active"); // Hapus kelas 'active' jika sudah aktif
+    accountDrop.classList.remove("active");
+} else {
+    dropContent.classList.add("active"); // Tambahkan kelas 'active' jika belum aktif
+    accountDrop.classList.add("active");
+  }
+
+  isActive = !isActive; // Ubah status isActive
+};
