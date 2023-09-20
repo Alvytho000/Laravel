@@ -24,10 +24,10 @@
             </form>
         @else
             <nav class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="#encyclopedia">Encyclopedia</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="{{ route('index') }}#home" class="active">Home</a>
+                <a href="{{ route('index') }}#encyclopedia">Encyclopedia</a>
+                <a href="{{ route('index') }}#about">About</a>
+                <a href="{{ route('index') }}#contact">Contact</a>
             </nav>
             <div class="social-media">
                 <ul class="navbar-social-media">
@@ -40,7 +40,7 @@
             <div class="account-dropdown">
                 <a href="#" class="dropdown">{{ Auth::user()->name }}</a>
                 <div class="dropdown-content">
-                    <form action="" method="get">
+                    <form action="{{ route('profile') }}" method="get">
                         @csrf
                         <button type="submit" class="profile">Profile</button>
                     </form>

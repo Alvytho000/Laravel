@@ -3,6 +3,8 @@
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,7 @@ Route::get('/register',[LoginController::class,'register'])->name('register');
 Route::post('/login-proses',[LoginController::class,'login_proses'])->name('login-proses');
 Route::post('/register-proses',[LoginController::class,'register_proses'])->name('register-proses');
 
-Route::get('/encyclopedia',[Controller::class,'encyclopedia'])->name('encyclopedia');
 
+Route::get('/encyclopedia',[Controller::class,'encyclopedia'])->name('encyclopedia');
+Route::get('/profile',[Controller::class,'profile'])->name('profile');
 Route::get('/',[Controller::class,'index'])->name('index');

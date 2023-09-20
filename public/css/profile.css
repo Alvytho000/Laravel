@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #3b89fd;
+    --light-color: #ececec;
+    --dark-color: #000b20;
+    --primary-transparency: rgba(59, 137, 253, 0.5);
+    --light-transparency: rgba(236, 236, 236, 0.5);
+    --dark-transparency: rgba(0, 14, 32, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.profile {
+    width: 100%;
+    min-height: 200vh;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile .profile-card {
+    width: 80%;
+    background: linear-gradient(135deg, transparent, var(--primary-color));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+    border: 2px solid var(--primary-color);
+    margin: 20px 0;
+    box-shadow: 10px 10px 1rem rgba(0, 0, 0, .5);
+}
+
+.profile-card h1 {
+    color: var(--dark-color);
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.profile-card .profile-img {
+    display: flex;
+    align-items: end;
+}
+
+.profile-card .profile-img .img-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.profile-card .profile-img .img-box img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-card .change-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -65px;
+    overflow: hidden;
+}
+
+.profile-card .change-img .btn {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-card .change-img .btn i {
+    color: var(--dark-color);
+    font-size: 26px;
+}

@@ -437,6 +437,7 @@ body {
     height: 40px;
     justify-content: space-between;
     align-items: center;
+    bottom: 0;
 }
 
 .footer .to-top {
