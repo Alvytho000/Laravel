@@ -40,8 +40,14 @@
             <div class="account-dropdown">
                 <a href="#" class="dropdown">{{ Auth::user()->name }}</a>
                 <div class="dropdown-content">
-                    <a href="#">Profile</a>
-                    <button type="submit" class="logout">Logout</button>
+                    <form action="" method="get">
+                        @csrf
+                        <button type="submit" class="profile">Profile</button>
+                    </form>
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button type="submit" class="logout">Logout</button>
+                    </form>
                 </div>
             </div>
         @endguest
